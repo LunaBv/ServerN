@@ -1,0 +1,56 @@
+:main
+a_name Elyx utilities
+a_version 1.0
+a_author luna
+
+:button instalar_Fantasy_MC
+text Instalar Fantasy MC (1.20.1 / Fabric)
+remove_server
+download_version n fabric 1.20.1
+config server_type fabric
+config server_version 1.20.1
+config_save
+say Descargando Fantasy...
+download_file https://mediafilez.forgecdn.net/files/5386/331/fantasymc_fabric_1.20.1_2.9.3b_server_pack.zip Fantasy.zip
+unzip Fantasy.zip
+say Fantasy instalado!
+sleep 3 
+
+:button instalar_Cursed_Walking - A Modern Zombie Apocalypse
+text Instalar Cursed_Walking (1.20.1 / Forge)
+remove_server
+download_version n forge 1.20.1
+config server_type forge
+config server_version 1.20.1
+config_save
+say Descargando Cursed_Walking...
+download_file https://mediafilez.forgecdn.net/files/5370/200/Cursed%20Walking%201.20.1%20Version%201.4.1%20Server%20Files.zip Cursed.zip
+unzip Cursed.zip
+say Cursed_Walking instalado!
+sleep 3 
+
+:button instalar_DeceasedCraft - Modern Zombie Apocalypse
+text Instalar DeceasedCraft (1.18.2 / Forge)
+remove_server
+download_version n forge 1.18.2
+config server_type forge
+config server_version 1.18.2
+config_save
+say Descargando Cursed_Walking...
+download_file https://mediafilez.forgecdn.net/files/5391/639/DeceasedCraft_Server_v5.5.4.zip DeceasedCraft.zip
+unzip DeceasedCraft.zip
+say DeceasedCraft instalado!
+sleep 3 
+
+:button Chosens Modded Adventure
+text Instalar Chosens Modded Adventure (1.20.1 / Forge)
+remove_server
+download_version n forge 1.20.1
+config server_type forge
+config server_version 1.20.1
+config_save
+say Descargando Chosens Modded Adventure...
+download_file https://mediafilez.forgecdn.net/files/5311/782/CMA%20Server%20Files%200.9.2.zip Adventure.zip
+unzip Adventure.zip
+say Chosens Modded Adventure instalado!
+sleep 3 

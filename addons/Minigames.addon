@@ -1,0 +1,24 @@
+:main
+a_name Luna Minigames
+a_version 1.0
+a_author luna
+a_add_type c_forge
+a_add_version c_forge 50.0.8 https://maven.minecraftforge.net/net/minecraftforge/forge/1.21-51.0.8/forge-1.21-51.0.8-installer.jar 17
+
+:button OneBlock 1.21
+text Instalar OneBlock (1.21 / Forge)
+remove_server
+download_version y c_forge 50.0.8
+exec java -jar 50.0.8.jar --installServer
+config server_type forge
+config server_version 1.21
+config_save
+say Descargando OneBlock...
+download_file https://mediafilez.forgecdn.net/files/5424/816/Oneblock%20Original%20%28v3.0.0%29%20%20by%20Crimson%20Creations.zip OneBlock.zip
+unzip OneBlock.zip
+exec echo "eula=true" >> eula.txt
+exec rm server-icon.png
+download_file https://www.dropbox.com/scl/fi/rwcaasa0y17m17vbkpeh9/icon.png?rlkey=znaxxw3w9r9ucrxbarxis4sd3&st=2uh1aug6&dl=1 server-icon.png
+exec rm OneBlock.zip
+say OneBlock instalado!
+sleep 3

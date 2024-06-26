@@ -1,43 +1,88 @@
 {
   "tcp_alloc": {
     "allowed": 6,
-    "claimed": 0,
-    "desired": 0
+    "claimed": 1,
+    "desired": 1
   },
   "tunnels": [
     {
       "active": true,
       "alloc": {
         "data": {
-          "assigned_domain": "lost-offer.gl.at.ply.gg",
-          "assigned_srv": null,
+          "assigned_domain": "resolution-placement.gl.joinmc.link",
+          "assigned_srv": "resolution-placement.gl.joinmc.link",
           "assignment": {
             "type": "shared-ip"
           },
-          "id": "2e405554-5f99-4ca2-8cde-b5702980ef2e",
-          "ip_hostname": "16.ip.gl.ply.gg",
+          "id": "d5684203-47e5-4c12-aa12-c0f8c5daf449",
+          "ip_hostname": "20.ip.gl.ply.gg",
           "ip_type": "both",
-          "port_end": 28164,
-          "port_start": 28163,
+          "port_end": 45673,
+          "port_start": 45672,
           "region": "global",
-          "static_ip4": "147.185.221.16",
-          "tunnel_ip": "2602:fbaf:0:1::10"
+          "static_ip4": "147.185.221.20",
+          "tunnel_ip": "2602:fbaf:0:1::14"
         },
         "status": "allocated"
       },
-      "created_at": "2024-06-23T03:30:42.722135Z",
+      "created_at": "2024-06-26T19:26:39.541536Z",
       "disabled_reason": null,
       "domain": null,
       "expire_notice": null,
       "firewall_id": null,
-      "id": "737288ee-ef77-4ea1-9536-fe50b5249385",
+      "id": "e6d8bce6-095d-4b26-90f2-1fb6facbf700",
+      "name": "Minecraft Java",
+      "origin": {
+        "data": {
+          "agent_id": "faeb0644-3f37-49d2-a12a-1fc8d6f17c15",
+          "agent_name": "from-key-e6a2",
+          "local_ip": "127.0.0.1",
+          "local_port": 25565
+        },
+        "type": "agent"
+      },
+      "port_count": 1,
+      "port_type": "tcp",
+      "ratelimit": {
+        "bytes_per_second": null,
+        "packets_per_second": null
+      },
+      "region": "global",
+      "tunnel_type": "minecraft-java"
+    },
+    {
+      "active": true,
+      "alloc": {
+        "data": {
+          "assigned_domain": "support-berkeley.gl.at.ply.gg",
+          "assigned_srv": null,
+          "assignment": {
+            "type": "shared-ip"
+          },
+          "id": "75376b44-c123-48a8-b7e1-dc915fb00278",
+          "ip_hostname": "20.ip.gl.ply.gg",
+          "ip_type": "both",
+          "port_end": 3306,
+          "port_start": 3305,
+          "region": "global",
+          "static_ip4": "147.185.221.20",
+          "tunnel_ip": "2602:fbaf:0:1::14"
+        },
+        "status": "allocated"
+      },
+      "created_at": "2024-06-26T19:32:42.038230Z",
+      "disabled_reason": null,
+      "domain": null,
+      "expire_notice": null,
+      "firewall_id": null,
+      "id": "c51a4ac0-3dfa-411d-983c-a6e61ae83e5a",
       "name": "unnamed",
       "origin": {
         "data": {
           "agent_id": "faeb0644-3f37-49d2-a12a-1fc8d6f17c15",
           "agent_name": "from-key-e6a2",
           "local_ip": "127.0.0.1",
-          "local_port": 28163
+          "local_port": 3305
         },
         "type": "agent"
       },

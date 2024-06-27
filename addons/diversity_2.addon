@@ -1,0 +1,34 @@
+:main
+a_name Luna Diversity 2
+a_version 1.0
+a_author luna
+
+:button Diversity 2
+text Instalar Diversity 2 (1.8.8 / Forge)
+remove_server
+download_version n forge 1.8.8
+config server_type forge
+config server_version 1.8.8
+config_save
+say Descargando Diversity 2...
+
+download_file https://mediafilez.forgecdn.net/files/2253/440/DIVERSITY%202%20PACKAGE%20-%20UNZIP%20THIS.zip posta.zip
+unzip posta.zip
+
+exec rm server-icon.png
+
+download_file https://www.dropbox.com/scl/fi/rwcaasa0y17m17vbkpeh9/icon.png?rlkey=znaxxw3w9r9ucrxbarxis4sd3&st=2uh1aug6&dl=1 server-icon.png
+
+download_file https://www.dropbox.com/scl/fi/9d9mirnpttv03qe5unjdw/world.zip?rlkey=drcyz7rmcly0myc8h29e25u48&st=k3dbu0hn&dl=1 world.zip
+unzip world.zip
+
+exec rm server.properties
+
+download_file https://www.dropbox.com/scl/fi/v62580ty2noosryjz7u17/server.properties?rlkey=a165ml62dcg5xckvo9ozzap1t&st=pj11h66e&dl=1 server.properties
+
+exec rm posta.zip
+exec rm world.zip
+exec rm -rf "DIVERSITY 2 PACKAGE - INCLUDES MAP FILE"
+
+say Diversity 2 instalado!
+sleep 3 

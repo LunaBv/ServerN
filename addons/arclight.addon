@@ -1,0 +1,21 @@
+:main
+a_name Luna arclight
+a_version 1.0
+a_author luna
+a_add_type c_arclight
+a_add_version c_arclight 1.16.5 https://www.dropbox.com/scl/fi/m9xj5k976ji2gz9h5nhq6/arclight-forge-1.16.5-1.0.24.jar?rlkey=9ibx2oc3z9943fvhjt6ztueis&st=p67jdios&dl=1 16
+a_add_version c_arclight forge1 https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.5-36.2.39/forge-1.16.5-36.2.39-installer.jar 16
+:button arclight
+text Instalar arclight 1.16.5
+remove_server
+download_version y c_arclight forge1
+config server_type forge1
+config server_version 1.16.5
+download_version y c_arclight 1.16.5
+exec java -jar 1.16.5.jar --installServer
+config_save
+
+exec echo "eula=true" >> eula.txt
+
+say arclight instalado!
+sleep 3

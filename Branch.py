@@ -7,7 +7,7 @@ init(autoreset=True)
 
 # Función para ejecutar comandos sin mostrar salida
 def run_command(command):
-    subprocess.run(command, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 # Solicitar el nombre del branch al usuario
 new_branch_name = input(Fore.CYAN + "Ingresa el nombre del branch: " + Style.RESET_ALL)

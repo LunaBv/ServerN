@@ -26,13 +26,16 @@ run_command(["git", "commit", "-m", commit_message])
 branches = subprocess.run(["git", "branch", "--list", new_branch_name], capture_output=True, text=True).stdout.strip()
 
 if branches:
+    # Branch ya existe, actualizarlo
     run_command(["git", "checkout", new_branch_name])
+    run_command(["git", "pull", "origin", new_branch_name])
 else:
+    # Crear nuevo branch
     run_command(["git", "checkout", "-b", new_branch_name])
 
 run_command(["git", "push", "origin", new_branch_name])
 
 # Imprimir el nombre del branch y el enlace
 branch_link = f"https://github.com/{username}/{repo_name}/tree/{new_branch_name}"
-print(Fore.GREEN + f"\nBranch creado: {new_branch_name}")
+print(Fore.GREEN + f"\nBranch creado/actualizado: {new_branch_name}")
 print(Fore.GREEN + f"Enlace al branch: {branch_link}" + Style.RESET_ALL)

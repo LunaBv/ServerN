@@ -7,11 +7,14 @@ def run_command(command):
 # Solicitar el nombre del branch al usuario
 new_branch_name = input("Ingresa el nombre del branch: ")
 commit_message = "Agregar todos los archivos nuevos o modificados"
-repo_name = "tu-repo"  # Cambia esto por tu nombre de repositorio
-username = "tu-usuario"  # Cambia esto por tu nombre de usuario
 
-# Agregar todos los archivos al índice
-run_command(["git", "add", "."])
+# Obtener información del repositorio
+repo_url = subprocess.run(["git", "config", "--get", "remote.origin.url"], capture_output=True, text=True).stdout.strip()
+repo_name = repo_url.split('/')[-1].replace('.git', '')
+username = repo_url.split('/')[-2]
+
+# Agregar todos los archivos, incluyendo los ignorados
+run_command(["git", "add", "--force", "."])
 run_command(["git", "commit", "-m", commit_message])
 
 # Verificar si el branch ya existe

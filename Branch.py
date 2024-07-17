@@ -20,19 +20,28 @@ username = repo_url.split('/')[-2]
 
 # Agregar todos los archivos, incluyendo los ignorados
 run_command(["git", "add", "--force", "."])
-run_command(["git", "commit", "-m", commit_message])
+
+# Verificar si hay cambios para hacer commit
+status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout.strip()
+if status:
+    run_command(["git", "commit", "-m", commit_message])
+else:
+    print(Fore.YELLOW + "No hay cambios para hacer commit.")
 
 # Verificar si el branch ya existe
 branches = subprocess.run(["git", "branch", "--list", new_branch_name], capture_output=True, text=True).stdout.strip()
 
 if branches:
+    # Branch ya existe, actualizarlo
     run_command(["git", "checkout", new_branch_name])
+    run_command(["git", "pull", "origin", new_branch_name])
 else:
+    # Crear nuevo branch
     run_command(["git", "checkout", "-b", new_branch_name])
 
 run_command(["git", "push", "origin", new_branch_name])
 
 # Imprimir el nombre del branch y el enlace
 branch_link = f"https://github.com/{username}/{repo_name}/tree/{new_branch_name}"
-print(Fore.GREEN + f"\nBranch creado: {new_branch_name}")
+print(Fore.GREEN + f"\nBranch creado/actualizado: {new_branch_name}")
 print(Fore.GREEN + f"Enlace al branch: {branch_link}" + Style.RESET_ALL)
